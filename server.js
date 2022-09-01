@@ -1,13 +1,17 @@
-const http = require("http");
+require("dotenv").config();
 
-const server = http.createServer((req, res) => {
-  console.log("run request...");
-  res.setHeader("Content-Type", "text/html");
-  res.write("<h3>Hello World<h3>");
-  res.write("<h2>Tran Dinh Nguyen<h2>");
-  res.end();
+const express = require("express");
+
+const app = express();
+const port = process.env.port || 4000;
+
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
+app.get("/about", (req, res) => {
+  res.send(`I'm Nguyen`);
 });
 
-server.listen(3000, "localhost", () => {
-  console.log("NODE.JS server is running on port 3000");
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`);
 });

@@ -46,3 +46,31 @@ body {
   margin-top: 15px;
   cursor: pointer;
 }
+
+.update-user {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  margin: auto;
+  transform: translate(-49%, -49%);
+}
+
+.update-user-item label {
+  display: block;
+}
+.btn-update {
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.home-page {
+  margin: 50px;
+  cursor: pointer;
+  border: 1px solid rgb(37, 91, 37);
+  font-size: larger;
+}
+
+.home-page button :hover {
+  background-color: red;
+}

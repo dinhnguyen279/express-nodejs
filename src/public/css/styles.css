@@ -71,6 +71,25 @@ body {
   font-size: larger;
 }
 
-.home-page button :hover {
-  background-color: red;
+.home-page:hover {
+  background-color: rgb(120, 120, 220);
+}
+
+.upload-file-container {
+  margin: 15px;
+  font-size: larger;
+}
+
+.upload-file-container label {
+  cursor: pointer;
+  display: block;
+}
+.btn-save {
+  margin: 15px;
+  border: 1px solid grey;
+}
+
+.btn-save:hover {
+  cursor: pointer;
+  background-color: green;
 }

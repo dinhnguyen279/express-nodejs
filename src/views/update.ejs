@@ -7,11 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update User</title>
     <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        body {
+            background-image: linear-gradient(to right, rgb(0, 117, 128), rgb(161, 187, 189));
+        }
+    </style>
 </head>
 
 <body>
     <div class="update-user">
-        <form action="/update-user" method="post">
+        <h1 style="text-align: center;color:rgb(0, 117, 128) ;">Form Edit User</h1>
+        <form action="/update-user" method="post" class="form-update">
             <div class="update-user-item">
                 <label>First name</label>
                 <input type="text" name="firstName" value="<%= dataUser.firstName %>" />

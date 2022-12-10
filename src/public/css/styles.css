@@ -1,7 +1,3 @@
-h1 {
-  color: blueviolet;
-  border: 1px solid green;
-}
 img {
   width: 100%;
 }
@@ -42,37 +38,102 @@ body {
   display: block;
 }
 
+.create-user-input {
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 1px solid;
+}
+
+.form-listUser {
+  margin-right: 10px;
+}
+
+.btn-actions {
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid gainsboro;
+}
+
 .btn-submit {
   margin-top: 15px;
+  border-radius: 4px;
   cursor: pointer;
+  border: 1px solid gainsboro;
 }
+.btn-submit:hover {
+  background-color: rgb(20, 204, 20);
+}
+
+/* Edit Page */
 
 .update-user {
   position: absolute;
+  width: 400px;
+  height: 400px;
   left: 50%;
   top: 50%;
-  text-align: center;
-  margin: auto;
-  transform: translate(-49%, -49%);
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  font-size: 20px;
+  background: #f0f0f0;
 }
 
-.update-user-item label {
-  display: block;
+.form-update {
+  padding: 20px;
 }
+
+.update-user h1 {
+  margin-bottom: 0px;
+}
+
+.update-user-item {
+  display: flex;
+  flex-direction: column;
+  color: rgb(0, 117, 128);
+  outline: none;
+}
+
+.update-user-item input {
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+.update-user-item input:focus {
+  outline: none;
+}
+
 .btn-update {
   margin-top: 15px;
   cursor: pointer;
+  width: 100%;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.btn-update:hover {
+  background-image: linear-gradient(
+    to right,
+    rgb(0, 117, 128),
+    rgb(161, 187, 189)
+  );
+  color: white;
 }
 
 .home-page {
   margin: 50px;
+  padding: 5px 10px;
   cursor: pointer;
   border: 1px solid rgb(37, 91, 37);
   font-size: larger;
+  border-radius: 8px;
 }
 
 .home-page:hover {
-  background-color: rgb(120, 120, 220);
+  background-color: rgb(0, 117, 128);
+  color: white;
+  outline: none;
 }
 
 .upload-file-container {
@@ -81,6 +142,7 @@ body {
 }
 
 .upload-file-container label {
+  font-size: x-large;
   cursor: pointer;
   display: block;
 }
@@ -91,5 +153,9 @@ body {
 
 .btn-save:hover {
   cursor: pointer;
-  background-color: green;
+  background-color: grey;
+}
+
+.select-img {
+  padding-top: 15px;
 }

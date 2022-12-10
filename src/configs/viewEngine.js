@@ -1,7 +1,7 @@
 import express from "express";
 
 const configViewEngine = (app) => {
-  // set quyen truy cap
+  // set quyen truy cap cho express
   app.use(express.static("./src/public"));
 
   app.set("views engine", "ejs");

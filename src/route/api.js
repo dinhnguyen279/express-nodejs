@@ -1,6 +1,7 @@
 import express from "express";
-let router = express.Router();
 import APIController from "../controller/APIController";
+
+let router = express.Router();
 
 const initAPIRoute = (app) => {
   router.get("/users", APIController.getAllUsers); // method GET -> Read data

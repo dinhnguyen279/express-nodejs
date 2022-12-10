@@ -1,4 +1,4 @@
-import multer from "multer";
+// import multer from "multer";
 import pool from "../configs/connectDB";
 
 const getHomepage = async (req, res) => {
@@ -35,12 +35,14 @@ const createNewUser = async (req, res) => {
   return res.redirect("/");
 };
 
+// SQL Delete
 const deleteUser = async (req, res) => {
   let userId = req.body.userId;
   await pool.execute("delete from users where id = ?", [userId]);
   return res.redirect("/");
 };
 
+// SQL Update
 const getEditPage = async (req, res) => {
   let id = req.params.id;
   let [user] = await pool.execute("select * from users where id = ?", [id]);

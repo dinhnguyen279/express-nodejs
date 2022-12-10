@@ -40,6 +40,7 @@ let updateUser = async (req, res) => {
     message: "Ok",
   });
 };
+
 let deleteUser = async (req, res) => {
   let userId = req.params.id;
   if (!userId) {

@@ -40,14 +40,16 @@
             <td>
               <%= dataUser[i].lastName %>
             </td>
-            <td>
-              <button type="button"><a href="/detail/user/<%= dataUser[i].id %>" target="_blank">Details</a></button>
-              <form action="edit-user/<%= dataUser[i].id %>" method="get">
-                <button type="submit">Edit</button>
+            <td style="display:flex;">
+              <form class="form-listUser" action="/detail/user/<%= dataUser[i].id %>" target="_blank" method="get">
+                <button class="btn-actions" style="background-color: rgb(20, 204, 20) ;" type="submit">Details</button>
               </form>
-              <form action="/delete-user" method="post">
+              <form class="form-listUser" action="/edit-user/<%= dataUser[i].id %>" method="get">
+                <button class="btn-actions" style="background-color:rgb(40, 119, 197) ;" type="submit">Edit</button>
+              </form>
+              <form class="form-listUser" action="/delete-user" method="post">
                 <input type="text" value="<%= dataUser[i].id %>" hidden name="userId" />
-                <button type="submit">Delete</button>
+                <button class="btn-actions" style="background-color: brown;" type=" submit">Delete</button>
               </form>
             </td>
           </tr>
@@ -58,22 +60,22 @@
 
   <div class="create-user-container">
     <form action="create-new-user" method="post">
-      <div><b>Create a new user:</b></div>
+      <h2><b><i>Create a new user:</i></b></h2>
       <div>
         <label for="">First Name</label>
-        <input type="text" name="firstName" />
+        <input class="create-user-input" type="text" name="firstName" />
       </div>
       <div>
         <label for="">Last Name</label>
-        <input type="text" name="lastName" />
+        <input class="create-user-input" type="text" name="lastName" />
       </div>
       <div>
         <label for="">Email</label>
-        <input type="email" name="email" />
+        <input class="create-user-input" type="email" name="email" />
       </div>
       <div>
         <label for="">Address</label>
-        <input type="text" name="address" />
+        <input class="create-user-input" type="text" name="address" />
       </div>
       <div>
         <button type="submit" class="btn-submit">Submit</button>

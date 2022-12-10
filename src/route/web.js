@@ -29,21 +29,26 @@ const imageFilter = function (req, file, cb) {
   }
   cb(null, true);
 };
-
+// Upload single File
 let upload = multer({ storage: storage, fileFilter: imageFilter });
+// Upload Multiple File
+let multi_upload = multer({
+  storage: storage,
+  fileFilter: imageFilter,
+}).array("uploadedImages", 4);
 
 const initWebRoute = (app) => {
   router.get("/", homeController.getHomepage);
+
   router.get("/detail/user/:id", homeController.getDetailPage);
+
   router.post("/create-new-user", homeController.createNewUser);
 
   router.post("/delete-user", homeController.deleteUser);
+
   router.get("/edit-user/:id", homeController.getEditPage);
   router.post("/update-user", homeController.postUpdateUser);
 
-  router.get("/about", (req, res) => {
-    res.send(`I'm Nguyen`);
-  });
   // Upload single File
   router.get("/upload", homeController.getUploadFile);
   router.post(
@@ -51,14 +56,7 @@ const initWebRoute = (app) => {
     upload.single("images"),
     homeController.handleUploadFile
   );
-
   // Upload Multiple File
-  let multi_upload = multer({
-    storage: storage,
-    fileFilter: imageFilter,
-  }).array("uploadedImages", 4);
-
-  // router
   router.post(
     "/upload-multiple-images",
     (req, res, next) => {
